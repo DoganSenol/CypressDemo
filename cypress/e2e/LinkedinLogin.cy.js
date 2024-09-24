@@ -7,6 +7,8 @@ describe('Linkedin Login Test', () =>{
         cy.get("a[data-tracking-control-name='guest_homepage-basic_nav-header-signin']").click();
         cy.get("input[id='username']").type(Cypress.env('user_name'),{log: false})
 
+        
+
 
     })
 })
