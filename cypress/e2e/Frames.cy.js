@@ -23,13 +23,24 @@ it('appraoch2 - by using Custom command', () => {
  
 })
 
-it.only('appraoch3 - by using cypress-iframe plugin', () => {
+it('appraoch3 - by using cypress-iframe plugin', () => {
 
     cy.visit("https://qavbox.github.io/demo/iframes/");
 
     cy.frameLoaded("[id='Frame2']");  //Load the frame
 
     cy.iframe("[id='Frame2']").find("[id='frameinput']").clear().type("Iphone");
+})
+
+it.only('appraoch3 - by using cypress-iframe plugin', () => {
+
+    cy.visit("https://www.rediff.com/");
+
+    cy.get("button[class='fc-button fc-cta-consent fc-primary-button']").click();
+
+    cy.frameLoaded("[id='moneyiframe']");  //Load the frame
+
+    cy.iframe("[id='moneyiframe']").find("div[class='cellone']>a").invoke('removeAttr','target').click();
 })
 
 })
