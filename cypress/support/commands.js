@@ -28,6 +28,9 @@
 
 /// ＜reference types="cypress-xpath" /＞
 
+/// <reference types="./commands" />
+
+
 import 'cypress-iframe';
 
 Cypress.Commands.add('getIframe', (iFrameLocator) => {

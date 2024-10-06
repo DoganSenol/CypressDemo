@@ -18,7 +18,7 @@ describe('Custom commands',()=>{
     })
 
     
-    it('overwriting existing command', () => {
+    it.only('overwriting existing command', () => {
         cy.visit("https://automationteststore.com/");
         
         cy.clickLink("BENEfit bellA BAMBA");
@@ -26,7 +26,7 @@ describe('Custom commands',()=>{
     });
 
      
-    it.only('Login command', () => {
+    it('Login command', () => {
         cy.visit("https://automationteststore.com/");
         
         cy.clickLink("login or register");
