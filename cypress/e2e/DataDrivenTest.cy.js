@@ -12,9 +12,10 @@ describe('MySuite', () => {
                 cy.get("button[type='submit']").click();
 
                 if (userdata.username == 'Admin' && userdata.password == 'admin123') {
-                    cy.get("span[class='oxd-topbar-header-breadcrumb']>h6").should('have.text', userdata.expected);
-                    cy.get("span[class='oxd-userdropdown-tab']").click();
-                    cy.get("ul[class='oxd-dropdown-menu']>li:nth-child(4)").click();
+                    cy.get("span[class='oxd-topbar-header-breadcrumb']>h6").should('have.text', userdata.expected); //Dashboard validation
+                
+                    cy.get("span[class='oxd-userdropdown-tab']").click();           //logout
+                    cy.get("ul[class='oxd-dropdown-menu']>li:nth-child(4)").click();//logout
 
                 }
 
