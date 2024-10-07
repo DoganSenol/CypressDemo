@@ -16,6 +16,9 @@ describe('MySuite',()=>{
 
 
     })
+
+    //Automaticly capture screenshot & video on failure -only when you execute through CLI
+
     it.only('Capture screenshots & videos', ()=>{
 
         cy.visit("https://automationteststore.com/");
@@ -26,7 +29,7 @@ describe('MySuite',()=>{
       
     
 
-        //Automaticly capture screenshot & video on failure -only when you execute through CLI
+        //npx cypress run cypress\e2e\CaptureScreenshotAndVideo.cy.js     That ist the way for the running the tests in headless mode for capture screenshot and videos
 
        
 

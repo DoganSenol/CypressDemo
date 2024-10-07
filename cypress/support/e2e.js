@@ -20,3 +20,5 @@ import './commands'
 // require('./commands')
 
 require('cypress-xpath') // we should include thise here to use xpath
+
+import 'cypress-mochawesome-reporter/register';
